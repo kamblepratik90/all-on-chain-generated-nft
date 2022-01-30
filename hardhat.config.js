@@ -15,6 +15,8 @@ const RINKEBY_RPC_URL = process.env.RINKEBY_RPC_URL || "https://eth-rinkeby.alch
 const KOVAN_RPC_URL = process.env.KOVAN_RPC_URL || "https://eth-kovan.alchemyapi.io/v2/your-api-key"
 const MNEMONIC = process.env.MNEMONIC || "your mnemonic"
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || "Your etherscan API key"
+const MUMBAI_RPC_URL = process.env.MUMBAI_RPC_URL
+
 // optional
 const PRIVATE_KEY = process.env.PRIVATE_KEY || "your private key"
 
@@ -68,6 +70,11 @@ module.exports = {
             },
             saveDeployments: true,
         },
+        mumbai: {
+            url:MUMBAI_RPC_URL,
+            accounts: [PRIVATE_KEY],
+            saveDeployments: true,
+        }
     },
     etherscan: {
         // Your API key for Etherscan
